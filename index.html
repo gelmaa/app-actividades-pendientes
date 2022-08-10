@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Actividades Pendientes</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">
+                Actividades Pendientes
+            </a>
+        </div>      
+    </nav>
+
+    <div class="container">
+        <!--APLICATION-->
+        <div id="App" class="row pt-3">
+            <div class="col-md-4">
+                <div class="card border-primary" style="max-width: 30rem;">
+                    <div class="card-header">
+                        <h5 class="mt-2 ms-2"><strong>Agrega una actividad</strong></h5>
+                    </div>
+                    <form id="activity-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="activity" placeholder="Actividad" class="form-control">
+                        </div>
+                        <div class="form-group pt-3">
+                            <input type="text" id="course" placeholder="Asignatura" class="form-control">
+                        </div>
+                        <h6 class="mt-3 ms-1">Fecha de Entrega:</h6>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <input type="number" id="day" placeholder="Día" class="form-control" min="1" max="31" value="1">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <select class="form-select" id="month">
+                                  <option>Enero</option>
+                                  <option>Febrero</option>
+                                  <option>Marzo</option>
+                                  <option>Abril</option>
+                                  <option>Mayo</option>
+                                  <option>Junio</option>
+                                  <option>Julio</option>
+                                  <option>Agosto</option>
+                                  <option>Septiembre</option>
+                                  <option>Octubre</option>
+                                  <option>Noviembre</option>
+                                  <option>Diciembre</option>
+                                </select>
+                              </div>
+                            <div class="col-md-4">
+                                <input type="number" id="year" placeholder="Año" class="form-control" value="2022" min="2022">
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 pt-3">
+                            <input type="submit" value="Guardar" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="activity-list" class="col-md-8"></div>
+        </div>
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>
